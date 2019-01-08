@@ -38,7 +38,7 @@ namespace Abp.Zero.SampleApp.EntityFrameworkCore.TestDataBuilders.HostDatas
                     new MultiTenancy.Tenant(tenancyName, tenancyName)
                     {
                         ConnectionString = SimpleStringCipher.Instance.Encrypt(
-                            $"server=localhost;database=AbpZeroTenantDb_{tenancyName}_{Guid.NewGuid().ToString("N").Left(8)};trusted_connection=true;"
+                            $"server=172.16.4.74;database=AbpZeroTenantDb_{tenancyName}_{Guid.NewGuid().ToString("N").Left(8)};trusted_connection=true;"
                         )
                     }).Entity;
 
